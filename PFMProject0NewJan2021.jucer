@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="VauErw" name="PFMProject0NewJan2021" projectType="audioplug"
-              useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+              useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1"
+              pluginCharacteristicsValue="pluginIsSynth">
   <MAINGROUP id="C5Ei61" name="PFMProject0NewJan2021">
     <GROUP id="{53CC19E9-43AE-31F8-E955-E16A03814CBC}" name="Source">
       <FILE id="mzp0jV" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -51,4 +52,7 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
