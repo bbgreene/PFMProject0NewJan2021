@@ -19,9 +19,12 @@ PFMProject0NewJan2021AudioProcessor::PFMProject0NewJan2021AudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       )//,
 #endif
+//shouldPlaySound("ShouldPlaySoundParam", "shouldPlaySound", false)
 {
+    shouldPlaySound = new juce::AudioParameterBool("ShouldPlaySoundParam", "shouldPlaySound", false);
+    addParameter(shouldPlaySound);
 }
 
 PFMProject0NewJan2021AudioProcessor::~PFMProject0NewJan2021AudioProcessor()
@@ -150,11 +153,20 @@ void PFMProject0NewJan2021AudioProcessor::processBlock (juce::AudioBuffer<float>
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    juce::Random r;
+    for( int i = 0; i < buffer.getNumSamples(); ++i )
     {
-        auto* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
+        for( int channel = 0; channel < buffer.getNumChannels(); ++channel)
+        {
+            if( shouldPlaySound->get() )
+            {
+                buffer.setSample(channel, i, r.nextFloat());
+            }
+            else
+            {
+                buffer.setSample(channel, i, 0);
+            }
+        }
     }
 }
 
@@ -183,6 +195,12 @@ void PFMProject0NewJan2021AudioProcessor::setStateInformation (const void* data,
     // whose contents will have been created by the getStateInformation() call.
 }
 
+void PFMProject0NewJan2021AudioProcessor::UpdateAutomatableParameter(juce::RangedAudioParameter * param, float value)
+{
+    param->beginChangeGesture();
+    param->setValueNotifyingHost(value);
+    param->endChangeGesture();
+}
 //==============================================================================
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()

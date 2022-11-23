@@ -61,11 +61,11 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="5" x="0.4925" y="0.5980769230769231" uiLastX_Normal="1353"
-          uiLastY_Normal="85" uiopen_Normal="0">
+  <FILTER uid="5" x="0.4" y="0.4019230769230769" uiLastX_Normal="968" uiLastY_Normal="100"
+          uiopen_Normal="1">
     <PLUGIN name="PFMProject0NewJan2021" format="VST3" category="Instrument|Synth"
             manufacturer="yourcompany" version="1.0.0" file="/Users/programming/Library/Audio/Plug-Ins/VST3/PFMProject0NewJan2021.vst3"
-            uid="acfcb38c" isInstrument="1" fileTime="176cde78790" infoUpdateTime="176cdf8b72e"
+            uid="acfcb38c" isInstrument="1" fileTime="176cde78790" infoUpdateTime="178833c7405"
             numInputs="0" numOutputs="2" isShell="0"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
