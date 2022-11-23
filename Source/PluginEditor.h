@@ -9,11 +9,13 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "PluginProcessor.h"
+//#include "PluginProcessor.h"
 
 //==============================================================================
 /**
 */
+struct PFMProject0NewJan2021AudioProcessor;
+
 class PFMProject0NewJan2021AudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 public:
@@ -23,6 +25,9 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
+    
+    void mouseDown(const juce::MouseEvent& e) override;
+    void mouseUp(const juce::MouseEvent& e) override;
 
 private:
     // This reference is provided as a quick way for your editor to
